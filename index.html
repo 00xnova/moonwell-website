@@ -131,6 +131,7 @@
   <nav>
     <a class="brand" href="#top">🌙 Moonwell</a>
     <div class="links">
+      <a href="#download">Download</a>
       <a href="#about">About</a>
       <a href="#why">Why</a>
       <a href="#promises">Promises</a>
@@ -143,8 +144,7 @@
   <header style="margin-top: 40px;">
     <h1>🌙 Moonwell</h1>
     <p class="tagline">A free idle MMO. No pay-to-win. Nothing to buy. Ever.</p>
-    <!-- TODO: replace # with your real download / play link -->
-    <a class="button primary" href="#">Play for free</a>
+    <a class="button primary" href="#download">Play for free</a>
     <!-- TODO: put your real Discord invite below -->
     <a class="button" href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noopener">Discord</a>
     <a class="button" href="https://x.com/TouchGrassGames" target="_blank" rel="noopener">Twitter / X</a>
@@ -154,6 +154,26 @@
       <div class="placeholder">Main screenshot coming soon</div>
     </figure>
   </header>
+
+  <section id="download">
+    <h2>Download the 0.1 beta</h2>
+    <p>Moonwell is in an early, open beta. Download the game for your computer, open it, and choose <strong>New user</strong> to make an account. Expect rough edges and the occasional bug.</p>
+    <p>
+      <a class="button primary" href="https://github.com/00xnova/moonwell-website/releases/latest/download/Moonwell-mac.zip">Mac</a>
+      <a class="button primary" href="https://github.com/00xnova/moonwell-website/releases/latest/download/Moonwell-windows-x86_64.zip">Windows</a>
+      <a class="button primary" href="https://github.com/00xnova/moonwell-website/releases/latest/download/Moonwell-linux-x86_64.tar.gz">Linux</a>
+    </p>
+    <p class="small">The beta builds are not yet signed by Apple or Microsoft, so your computer will warn you the first time:</p>
+    <dl>
+      <dt>Mac (Apple Silicon or Intel, macOS 11+)</dt>
+      <dd>Unzip, drag Moonwell to Applications, then right-click it and choose <strong>Open</strong>. If macOS still refuses, go to System Settings → Privacy &amp; Security and click <strong>Open Anyway</strong>.</dd>
+      <dt>Windows (64-bit)</dt>
+      <dd>Unzip and run <strong>Moonwell.exe</strong>. If SmartScreen appears, click <strong>More info</strong> → <strong>Run anyway</strong>.</dd>
+      <dt>Linux (64-bit)</dt>
+      <dd>Extract it and run <code>./moonwell</code>. Needs a desktop session (X11 or Wayland), working graphics drivers and glibc 2.35 or newer (Ubuntu 22.04, Fedora 36, Debian 12 or later).</dd>
+    </dl>
+    <p class="small">Checksums for every file are listed on the <a href="https://github.com/00xnova/moonwell-website/releases/latest" target="_blank" rel="noopener">release page</a>.</p>
+  </section>
 
   <section id="about">
     <h2>What is Moonwell?</h2>
