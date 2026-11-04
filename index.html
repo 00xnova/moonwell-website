@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moonwell — a free idle MMO</title>
-  <meta name="description" content="Moonwell is a free-to-play idle MMO with no pay-to-win and nothing to buy. Ever.">
+  <meta name="description" content="A free idle MMO. Nothing to buy.">
   <style>
     :root {
       color-scheme: dark;
@@ -30,11 +30,11 @@
       padding: 32px 20px 64px;
     }
     h1 { font-size: 2.4rem; line-height: 1.15; margin: 0 0 8px; }
-    h2 { font-size: 1.35rem; margin: 48px 0 12px; padding-top: 24px; border-top: 1px solid var(--line); }
+    h2 { font-size: 1.35rem; margin: 28px 0 12px; }
     h3 { font-size: 1.1rem; margin: 32px 0 8px; }
     p { margin: 0 0 16px; }
     a { color: var(--accent); }
-    .tagline { font-size: 1.2rem; color: var(--muted); margin-bottom: 24px; }
+    .tagline { font-size: 1.2rem; color: var(--muted); margin-bottom: 16px; }
     .button {
       display: inline-block;
       padding: 10px 20px;
@@ -125,7 +125,17 @@
       font-size: 1.2rem;
       font-style: italic;
     }
-  </style>
+
+    header.hero { margin-top: 28px; }
+    .lead { max-width: 40em; }
+    .fold { margin-top: 8px; }
+    details { margin: 0; padding: 14px 0; border-top: 1px solid var(--line); scroll-margin-top: 72px; }
+    summary { cursor: pointer; font-weight: 600; }
+    summary:hover { color: var(--accent); }
+    details[open] summary { margin-bottom: 14px; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
 </head>
 <body>
 <main id="top">
@@ -133,29 +143,62 @@
   <nav>
     <a class="brand" href="#top">🌙 Moonwell</a>
     <div class="links">
-      <a href="#about">About</a>
-      <a href="#why">Why</a>
-      <a href="#promises">Promises</a>
-      <a href="#transparency">Where the money goes</a>
-      <a href="#faq">FAQ</a>
+      <a href="#shots">Screenshots</a>
+      <a href="#support">Support</a>
     </div>
     <a class="nav-donate" href="https://ko-fi.com/projectmoonwell" target="_blank" rel="noopener">Donate</a>
   </nav>
 
-  <header style="margin-top: 40px;">
+  <header class="hero">
     <h1>🌙 Moonwell</h1>
-    <p class="tagline">A free idle MMO. No pay-to-win. Nothing to buy. Ever.</p>
+    <p class="tagline">A free idle MMO. Nothing to buy.</p>
     <!-- Hidden until real links exist:
     <a class="button primary" href="DOWNLOAD_OR_PLAY_LINK">Play for free</a>
     <a class="button" href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noopener">Discord</a>
     -->
-    <a class="button" href="https://x.com/TouchGrassGames" target="_blank" rel="noopener">Twitter / X</a>
-
-    <!-- Main image: the best screenshot or key art of the game -->
+    <!-- images/game-window.png: replace this placeholder when the art is final. See ASSET_REQUESTS.md. -->
+    <figure class="shot">
+      <div class="placeholder">Screenshot</div>
+      <figcaption>The game window.</figcaption>
+    </figure>
+    <p class="lead">You live in a city under two moons. Anything you set to repeat keeps going while you are away.</p>
   </header>
 
-  <section id="about">
-    <h2>What is Moonwell?</h2>
+  <section id="shots">
+    <h2>Screenshots</h2>
+    <div class="gallery">
+      <figure class="shot">
+        <!-- images/sign-in.png -->
+        <div class="placeholder">Screenshot</div>
+        <figcaption>Sign-in.</figcaption>
+      </figure>
+      <figure class="shot">
+        <!-- images/whispers.png -->
+        <div class="placeholder">Screenshot</div>
+        <figcaption>Whispers.</figcaption>
+      </figure>
+      <figure class="shot">
+        <!-- images/skills.png -->
+        <div class="placeholder">Screenshot</div>
+        <figcaption>Skills.</figcaption>
+      </figure>
+      <figure class="shot">
+        <!-- images/skill-reset.png -->
+        <div class="placeholder">Screenshot</div>
+        <figcaption>A skill reset.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p>Donations are optional and buy nothing in the game.</p>
+    <a class="button primary" href="https://ko-fi.com/projectmoonwell" target="_blank" rel="noopener">Donate on Ko-fi</a>
+  </section>
+
+  <div class="fold">
+    <details id="about">
+      <summary>About Moonwell</summary>
     <p>
       Moonwell is an online idle game you share with other players. You choose what
       your character does, and anything you set to repeat keeps going while you're away.
@@ -177,10 +220,10 @@
       <li>Chat with everyone in town, your guild, or a single resident.</li>
     </ul>
     <p><strong>Coming in the next update:</strong> a chat window along the bottom of the screen with Global, guild, group and whisper tabs; skill prestige with stars, up to level 99; and patch notes right on the sign-in screen.</p>
-  </section>
 
-  <section id="why">
-    <h2>Why I made Moonwell</h2>
+    </details>
+    <details id="why">
+      <summary>Why I made it</summary>
     <p>
       As a game developer, I want to simulate a fantasy world economy where real
       players shape the city. I've always had a great passion for economics, and
@@ -189,10 +232,10 @@
     <p>
       My end goal is to quit my job and work on Moonwell full-time.
     </p>
-  </section>
 
-  <section id="promises">
-    <h2>My promises to you</h2>
+    </details>
+    <details id="promises">
+      <summary>Promises</summary>
     <blockquote>
       "Your status and wealth in real life is not supposed to affect status and
       wealth in the game. Everyone starts out equal."
@@ -207,10 +250,10 @@
       <li><strong>Open books.</strong> I publish what Moonwell costs to run and how much has been donated, every month, right on this page.</li>
       <li><strong>I'll be honest with you.</strong> If anything about how Moonwell is funded ever needs to change, I'll tell players openly and in advance — and it will never break the promises above.</li>
     </ol>
-  </section>
 
-  <section id="transparency">
-    <h2>Where the money goes</h2>
+    </details>
+    <details id="transparency">
+      <summary>Where the money goes</summary>
     <p>
       Moonwell runs only on voluntary donations. I want you to see exactly what
       it costs to run, how much has come in, and what happens to every donation.
@@ -223,7 +266,7 @@
       <div class="bar-fill" id="bar-fill"></div>
     </div>
     <p class="small" id="goal-status"></p>
-    
+
     <a class="button primary" href="https://ko-fi.com/projectmoonwell" target="_blank" rel="noopener">Donate on Ko-fi</a>
 
     <h3>Monthly running costs</h3>
@@ -283,8 +326,47 @@
       <strong>Donating is completely optional and doesn't unlock anything.</strong>
       If you can't donate, that's okay — playing and telling your friends helps just as much.
     </p>
-  </section>
 
+    </details>
+    <details id="faq">
+      <summary>Questions</summary>
+    <dl>
+      <dt>Is it really free?</dt>
+      <dd>Yes. Everything in Moonwell is available to every player for free.</dd>
+
+      <dt>How do you make money then?</dt>
+      <dd>Moonwell's only income is voluntary donations from players who want to support the game — you can see every number above. I also work a full-time job, so for now I can cover all the costs myself and still get by. Donations help Moonwell grow, but the game doesn't depend on them to stay online.</dd>
+
+      <dt>Do donors get a badge, cosmetic, or bonus?</dt>
+      <dd>No. Donations give nothing in-game, so the game stays equal for everyone.</dd>
+
+      <dt>Do you get paid from donations?</dt>
+      <dd>Not right now. Donations go to running costs first, then the reserve, then the game. My long-term hope is to earn enough to pay rent and work on Moonwell full-time — if that ever happens, it will be shown openly on this page, and the game will still be free.</dd>
+
+      <dt>Do I need to keep the game open?</dt>
+      <dd>No. Anything you set to repeat keeps going while you're away, and you come back to what it earned.</dd>
+
+      <dt>When Steam release?</dt>
+      <dd>I've already paid the Steam fee and could release Moonwell on Steam today, but I'd rather wait for the 1.0 update. I can assure you it will be on Steam eventually with achievements, and having Steam items would be also very cool to have but not sure of the requirements right now.</dd>
+
+      <dt>Are the images AI?</dt>
+      <dd>Yes. I'm a software developer, not an artist, and at current rates I would go bankrupt trying to get art done for this game. I want to support human artists to the best of my abilities, so if you're an artist and want to work on this game, <a href="https://x.com/TouchGrassGames" target="_blank" rel="noopener">send me a message on X</a> and we can discuss the future of Moonwell!</dd>
+    </dl>
+
+    </details>
+  </div>
+
+  <footer>
+    <p>© 2026 Moonwell. Made by one developer who just wants to make a fair game.</p>
+    <p>
+      <!-- Hidden until a real invite exists: <a href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noopener">Discord</a> · -->
+      <a href="https://x.com/TouchGrassGames" target="_blank" rel="noopener">Twitter / X</a> ·
+      <a href="https://ko-fi.com/projectmoonwell" target="_blank" rel="noopener">Ko-fi</a>
+    </p>
+    <!-- TODO: add a contact email so players can ask about the numbers -->
+  </footer>
+
+</main>
   <script>
     // ============================================================
     //  EDIT THESE NUMBERS — this is the only part you need to touch.
@@ -418,44 +500,20 @@
       update();
     })();
   </script>
-
-  <section id="faq">
-    <h2>Questions</h2>
-    <dl>
-      <dt>Is it really free?</dt>
-      <dd>Yes. Everything in Moonwell is available to every player for free.</dd>
-
-      <dt>How do you make money then?</dt>
-      <dd>Moonwell's only income is voluntary donations from players who want to support the game — you can see every number above. I also work a full-time job, so for now I can cover all the costs myself and still get by. Donations help Moonwell grow, but the game doesn't depend on them to stay online.</dd>
-
-      <dt>Do donors get a badge, cosmetic, or bonus?</dt>
-      <dd>No. Donations give nothing in-game, so the game stays equal for everyone.</dd>
-
-      <dt>Do you get paid from donations?</dt>
-      <dd>Not right now. Donations go to running costs first, then the reserve, then the game. My long-term hope is to earn enough to pay rent and work on Moonwell full-time — if that ever happens, it will be shown openly on this page, and the game will still be free.</dd>
-
-      <dt>Do I need to keep the game open?</dt>
-      <dd>No. Anything you set to repeat keeps going while you're away, and you come back to what it earned.</dd>
-
-      <dt>When Steam release?</dt>
-      <dd>I've already paid the Steam fee and could release Moonwell on Steam today, but I'd rather wait for the 1.0 update. I can assure you it will be on Steam eventually with achievements, and having Steam items would be also very cool to have but not sure of the requirements right now.</dd>
-
-      <dt>Are the images AI?</dt>
-      <dd>Yes. I'm a software developer, not an artist, and at current rates I would go bankrupt trying to get art done for this game. I want to support human artists to the best of my abilities, so if you're an artist and want to work on this game, <a href="https://x.com/TouchGrassGames" target="_blank" rel="noopener">send me a message on X</a> and we can discuss the future of Moonwell!</dd>
-    </dl>
-  </section>
-
-
-  <footer>
-    <p>© 2026 Moonwell. Made by one developer who just wants to make a fair game.</p>
-    <p>
-      <!-- Hidden until a real invite exists: <a href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noopener">Discord</a> · -->
-      <a href="https://x.com/TouchGrassGames" target="_blank" rel="noopener">Twitter / X</a> ·
-      <a href="https://ko-fi.com/projectmoonwell" target="_blank" rel="noopener">Ko-fi</a>
-    </p>
-    <!-- TODO: add a contact email so players can ask about the numbers -->
-  </footer>
-
-</main>
+  <script>
+    // Open a collapsed section before the menu's own scroll handler runs.
+    function openFold(id) {
+      var target = document.getElementById(id);
+      if (!target) return;
+      var details = target.closest("details");
+      if (details) details.open = true;
+    }
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest && event.target.closest('a[href^="#"]');
+      if (!link) return;
+      openFold(link.getAttribute("href").slice(1));
+    }, true);
+    if (location.hash.length > 1) openFold(location.hash.slice(1));
+  </script>
 </body>
 </html>
