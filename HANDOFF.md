@@ -4,6 +4,8 @@ The homepage leads with a short pitch and five empty screenshot boxes. About, pr
 
 Worktree: `C:/Users/cropk/project_moonwell/moonwell-website-worktrees/website-simplify-20261104-codex`
 Branch: `codex/website-simplify-20261104-codex`
+Commit: `0b4590e3b524842d5d94b4461ece52ca9f670b8b`
+Pull request: https://github.com/00xnova/moonwell-website/pull/3
 Base: `a30b0c7` on `00xnova/moonwell-website` `main`.
 
 The funding figures, the October 20, 2026 date, and the funding script are unchanged. Ko-fi links are unchanged. Play and Discord stay commented out.
